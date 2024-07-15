@@ -1,10 +1,10 @@
 import React from "react";
 import { auth } from "./firebase";
-import { signInWithPopup } from "firebase/auth";
+import { signInWithPopup, User } from "firebase/auth";
 import { TwitterAuthProvider } from "firebase/auth";
 
 const Login: React.FC = () => {
-	const [user, setUser] = React.useState<firebase.User | null>(null);
+	const [user, setUser] = React.useState<User | null>(null);
 
   const handleTwitterLogin = async () => {
 		const provider = new TwitterAuthProvider();
